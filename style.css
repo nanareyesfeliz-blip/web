@@ -55,7 +55,6 @@ main {
     padding: 20px;
 }
 
-
 main > h2 {
     color: #8e4a67;
     text-align: center;
@@ -193,6 +192,7 @@ footer {
 }
 
 header .logo {
+    width: 100%;
     max-width: 500px;
     height: auto;
     display: block;
@@ -443,6 +443,8 @@ dialog.drawer .nav-link {
     nav .navbar-nav .nav-item:last-child {
         margin-left: auto !important;
     }
+}
+
 /* ---------- Diseño adaptable (responsive) ---------- */
 
 /* Base: nada se sale de la pantalla */
@@ -589,4 +591,38 @@ textarea {
         height: 260px;
     }
 }
+
+/* Ajustes adicionales para celular */
+html,
+body {
+    overflow-x: hidden;
+}
+
+nav .navbar-toggler {
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 6px;
+}
+
+nav .navbar-toggler:hover,
+nav .navbar-toggler:focus {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: white;
+}
+
+dialog.drawer .nav-link.activo {
+    color: #8e4a67;
+    border-bottom: 2px solid #8e4a67;
+}
+
+@media (min-width: 768px) {
+    dialog.drawer .nav-link.activo {
+        color: #ffd6e5;
+        border-bottom: 2px solid #ffd6e5;
+    }
+}
+
+#lista-carrito {
+    list-style: none;
+    padding-left: 0;
 }
