@@ -440,8 +440,153 @@ dialog.drawer .nav-link {
         padding: 0;
     }
 
-    /* Iniciar sesión / Mi cuenta a la esquina derecha */
     nav .navbar-nav .nav-item:last-child {
         margin-left: auto !important;
     }
+/* ---------- Diseño adaptable (responsive) ---------- */
+
+/* Base: nada se sale de la pantalla */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Campos de texto del formulario de contacto a todo el ancho */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+}
+
+/* Cuadrícula del catálogo: se ajusta sola, también en pantallas muy pequeñas */
+.catalogo-grid {
+    grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr));
+}
+
+/* Tabletas */
+@media (max-width: 991px) {
+    main {
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    header .logo {
+        max-width: 400px;
+    }
+}
+
+/* Celulares */
+@media (max-width: 767px) {
+    header {
+        padding: 20px 15px;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
+
+    header .logo {
+        max-width: 280px;
+    }
+
+    main {
+        margin: 10px auto;
+        padding: 10px;
+    }
+
+    section {
+        padding: 15px;
+        margin: 15px 0;
+    }
+
+    aside {
+        margin: 15px 10px;
+        padding: 15px;
+    }
+
+    form {
+        padding: 12px;
+    }
+
+    /* Catálogo: dos columnas en celular */
+    .catalogo-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .prenda img {
+        height: 200px;
+    }
+
+    .prenda h3 {
+        font-size: 14px;
+    }
+
+    .btn-agregar {
+        width: 100%;
+        padding: 10px 8px;
+        font-size: 13px;
+    }
+
+    /* Carrito: el botón "Quitar" baja debajo del detalle */
+    #lista-carrito li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .btn-quitar {
+        align-self: flex-end;
+    }
+
+    /* Botones de Opciones y formularios a todo el ancho */
+    #opciones .btn-pedido,
+    #carrito .btn-pedido,
+    .form-sesion .btn-pedido,
+    #panel-cuenta .btn-pedido,
+    input[type="submit"] {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 8px;
+    }
+
+    /* Pestañas de sesión repartidas en el ancho */
+    .pestanas {
+        flex-wrap: wrap;
+    }
+
+    .pestana {
+        flex: 1 1 auto;
+    }
+
+    footer {
+        padding: 15px 10px;
+        font-size: 14px;
+    }
+}
+
+/* Celulares muy pequeños: catálogo en una columna */
+@media (max-width: 400px) {
+    .catalogo-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .prenda img {
+        height: 260px;
+    }
+}
 }
