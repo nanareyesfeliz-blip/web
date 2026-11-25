@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Inicio | Ropa de Alta Costura Personalizada</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <img src="logo3.png" alt="Logo de Ropa de Alta Costura Personalizada" class="logo">
+        <h1>Ropa de Alta Costura Personalizada</h1>
+        <p>Diseña tu propia prenda de ropa.</p>
+    </header>
+
+    <nav class="navbar md:navbar-expand">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#inicio">Alta Costura</a>
+            <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navbarDrawer" aria-controls="navbarDrawer" aria-expanded="false" aria-label="Abrir menú">
+                <span class="navbar-toggler-icon" aria-hidden="true"></span>
+            </button>
+            <dialog class="drawer drawer-end" tabindex="-1" id="navbarDrawer" aria-labelledby="navbarDrawerLabel">
+                <div class="drawer-header">
+                    <h5 class="drawer-title" id="navbarDrawerLabel">Menú</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Cerrar"></button>
+                </div>
+                <div class="drawer-body mb-2 md:mb-0">
+                    <ul class="nav navbar-nav me-auto">
+                        <li class="nav-item"><a class="nav-link" href="#inicio" data-nav="inicio">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#catalogo" data-nav="catalogo">Catálogo</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#opciones" data-nav="opciones">Opciones</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#carrito" data-nav="carrito">Carrito</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#sesion" data-nav="sesion" id="nav-sesion">Iniciar sesión</a></li>
+                    </ul>
+                </div>
+            </dialog>
+        </div>
+    </nav>
+
+    <!-- ========== INICIO ========== -->
+    <div class="vista" data-vista="inicio">
+        <main>
+            <h2>Bienvenido a nuestra tienda</h2>
+            <p>Encuentra una prenda y personalízala según tus preferencias.</p>
+
+            <section>
+                <h2>¿Cómo funciona?</h2>
+                <ol>
+                    <li>Escoge el vestido en el <a href="#catalogo">Catálogo</a>.</li>
+                    <li>Elige tu talla, color, estampado y modelo en <a href="#opciones">Opciones</a> y agrégalo al carrito.</li>
+                    <li>Revisa tu pedido en el <a href="#carrito">Carrito</a> y pon la orden.</li>
+                    <li>¿Quieres guardar tus datos? <a href="#sesion">Inicia sesión o regístrate</a>.</li>
+                </ol>
+            </section>
+        </main>
+
+        <aside>
+            <h3>¿Necesitas ayuda?</h3>
+            <p>Utiliza el formulario de contacto para comunicarte con el equipo.</p>
+
+            <form id="form-contacto">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre">
+
+                <br><br>
+
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" name="correo">
+
+                <br><br>
+
+                <label for="mensaje">Mensaje:</label>
+                <br>
+                <textarea id="mensaje" name="mensaje" rows="5"></textarea>
+
+                <br><br>
+
+                <input type="submit" value="Enviar">
+            </form>
+
+            <p id="mensaje-contacto"></p>
+        </aside>
+    </div>
+
+    <!-- ========== CATÁLOGO ========== -->
+    <div class="vista" data-vista="catalogo">
+        <main>
+            <section id="catalogo">
+                <h2>Catálogo</h2>
+                <p>Aquí se podrán consultar las prendas disponibles para personalización.</p>
+                <p>Elige una prenda y personalízala en <a href="#opciones">Opciones</a>.</p>
+                <p id="mensaje-catalogo" class="mensaje"></p>
+
+                <div class="catalogo-grid">
+                    <article class="prenda">
+                        <img src="img/vestido1.png" alt="Vestido celeste bordado">
+                        <h3>Vestido celeste bordado</h3>
+                        <button class="btn-agregar">Personalizar esta prenda</button>
+                    </article>
+
+                    <article class="prenda">
+                        <img src="img/vestido2.png" alt="Vestido mini floral con lentejuelas">
+                        <h3>Vestido mini floral con lentejuelas</h3>
+                        <button class="btn-agregar">Personalizar esta prenda</button>
+                    </article>
+
+                    <article class="prenda">
+                        <img src="img/vestido3.png" alt="Vestido plateado asimétrico">
+                        <h3>Vestido plateado asimétrico</h3>
+                        <button class="btn-agregar">Personalizar esta prenda</button>
+                    </article>
+
+                    <article class="prenda">
+                        <img src="img/vestido4.png" alt="Vestido borgoña de satén">
+                        <h3>Vestido borgoña de satén</h3>
+                        <button class="btn-agregar">Personalizar esta prenda</button>
+                    </article>
+
+                    <article class="prenda">
+                        <img src="img/vestido5.png" alt="Vestido blanco drapeado">
+                        <h3>Vestido blanco drapeado</h3>
+                        <button class="btn-agregar">Personalizar esta prenda</button>
+                    </article>
+
+                    <article class="prenda">
+                        <img src="img/vestido6.png" alt="Vestido blanco floral">
+                        <h3>Vestido blanco floral</h3>
+                        <button class="btn-agregar">Personalizar esta prenda</button>
+                    </article>
+
+                    <article class="prenda">
+                        <img src="img/vestido7.png" alt="Vestido verde estampado">
+                        <h3>Vestido verde estampado</h3>
+                        <button class="btn-agregar">Personalizar esta prenda</button>
+                    </article>
+
+                    <article class="prenda">
+                        <img src="img/vestido8.png" alt="Vestido verde estampado">
+                        <h3>Dotted Palm Leaves Cotton</h3>
+                        <button class="btn-agregar">Personalizar esta prenda</button>
+                    </article>
+
+                    <article class="prenda">
+                        <img src="img/vestido9.png" alt="Vestido verde estampado">
+                        <h3>Botanical Drape-Detailed</h3>
+                        <button class="btn-agregar">Personalizar esta prenda</button>
+                    </article>
+
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- ========== OPCIONES ========== -->
+    <div class="vista" data-vista="opciones">
+        <main>
+            <section id="opciones">
+                <h2>Opciones de personalización</h2>
+
+                <p>Prenda seleccionada: <strong id="op-prenda"></strong></p>
+
+                <label>Talla:
+                    <select id="op-talla" autocomplete="off">
+                        <option value="">Selecciona...</option>
+                        <option>XS</option>
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                        <option>XL</option>
+                    </select>
+                </label>
+
+                <label>Color:
+                    <select id="op-color" autocomplete="off">
+                        <option value="">Selecciona...</option>
+                        <option>Negro</option>
+                        <option>Blanco</option>
+                        <option>Rojo vino</option>
+                        <option>Azul</option>
+                        <option>Verde</option>
+                    </select>
+                </label>
+
+                <label>Estampado:
+                    <select id="op-estampado" autocomplete="off">
+                        <option value="">Selecciona...</option>
+                        <option>Sin estampado</option>
+                        <option>Floral</option>
+                        <option>Rayas</option>
+                    </select>
+                </label>
+
+                <label>Modelo:
+                    <select id="op-modelo" autocomplete="off">
+                        <option value="">Selecciona...</option>
+                        <option>Corto</option>
+                        <option>Midi</option>
+                        <option>Largo</option>
+                    </select>
+                </label>
+
+                <label>Accesorios:
+                    <select id="op-accesorios" autocomplete="off">
+                        <option>Ninguno</option>
+                        <option>Cinturón</option>
+                        <option>Chal</option>
+                        <option>Guantes</option>
+                        <option>Bolso de mano</option>
+                    </select>
+                </label>
+
+                <label>Diseño personalizado:
+                    <textarea id="op-diseno" rows="3" placeholder="Describe detalles especiales: bordados, largo, tela..."></textarea>
+                </label>
+
+                <button id="btn-guardar" class="btn-pedido">Guardar personalización</button>
+                <button id="btn-agregar-carrito" class="btn-pedido">Agregar al carrito</button>
+                <p id="mensaje-opciones" class="mensaje"></p>
+            </section>
+        </main>
+    </div>
+
+    <!-- ========== CARRITO ========== -->
+    <div class="vista" data-vista="carrito">
+        <main>
+            <section id="carrito">
+                <h2>Carrito de compra</h2>
+                <p>Aquí se podrán revisar los productos seleccionados.</p>
+                <ul id="lista-carrito"></ul>
+                <button id="btn-pedido" class="btn-pedido">Poner la orden</button>
+                <p id="mensaje-pedido" class="mensaje"></p>
+            </section>
+        </main>
+    </div>
+
+    <!-- ========== INICIAR SESIÓN / REGISTRO ========== -->
+    <div class="vista" data-vista="sesion">
+        <main>
+            <section id="sesion">
+                <h2>Mi cuenta</h2>
+
+                <!-- Con sesión iniciada -->
+                <div id="panel-cuenta" hidden>
+                    <p>Sesión iniciada como <strong id="cuenta-nombre"></strong> (<span id="cuenta-correo"></span>).</p>
+                    <button id="btn-logout" class="btn-pedido" type="button">Cerrar sesión</button>
+                </div>
+
+                <!-- Sin sesión -->
+                <div id="panel-acceso">
+                    <div class="pestanas" role="tablist">
+                        <button type="button" class="pestana activa" data-modo="login" role="tab">Iniciar sesión</button>
+                        <button type="button" class="pestana" data-modo="registro" role="tab">Registrarme</button>
+                    </div>
+
+                    <form id="form-login" class="form-sesion" novalidate>
+                        <label class="form-label" for="login-correo">Correo electrónico</label>
+                        <input class="form-control" type="email" id="login-correo" autocomplete="email" required>
+
+                        <label class="form-label" for="login-clave">Contraseña</label>
+                        <input class="form-control" type="password" id="login-clave" autocomplete="current-password" required>
+
+                        <button type="submit" class="btn-pedido">Entrar</button>
+                        <p class="mensaje" id="mensaje-login" role="alert"></p>
+                    </form>
+
+                    <form id="form-registro" class="form-sesion" novalidate hidden>
+                        <label class="form-label" for="reg-nombre">Nombre completo</label>
+                        <input class="form-control" type="text" id="reg-nombre" autocomplete="name" required>
+
+                        <label class="form-label" for="reg-correo">Correo electrónico</label>
+                        <input class="form-control" type="email" id="reg-correo" autocomplete="email" required>
+
+                        <label class="form-label" for="reg-clave">Contraseña (mínimo 6 caracteres)</label>
+                        <input class="form-control" type="password" id="reg-clave" autocomplete="new-password" required>
+
+                        <label class="form-label" for="reg-clave2">Confirmar contraseña</label>
+                        <input class="form-control" type="password" id="reg-clave2" autocomplete="new-password" required>
+
+                        <button type="submit" class="btn-pedido">Crear cuenta</button>
+                        <p class="mensaje" id="mensaje-registro" role="alert"></p>
+                    </form>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>Bozzeto: Ropa de Alta Costura Personalizada - 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,447 @@
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f8f1f4;
+    color: #333;
+}
+
+/* Encabezado */
+header {
+    background-color: #8e4a67;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+header p {
+    font-size: 18px;
+}
+
+/* Menú de navegación */
+nav {
+    background-color: #5f3045;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ffd6e5;
+}
+
+/* Contenido principal */
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+
+main > h2 {
+    color: #8e4a67;
+    text-align: center;
+}
+
+main > p {
+    text-align: center;
+}
+
+/* Secciones */
+section {
+    background-color: white;
+    margin: 25px 0;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    color: #8e4a67;
+}
+
+/* Lista de opciones */
+#opciones li {
+    margin: 10px 0;
+    padding: 8px;
+    background-color: #f5dce6;
+    border-radius: 5px;
+}
+
+/* Barra lateral */
+aside {
+    max-width: 850px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: #ead0dc;
+    border-radius: 10px;
+}
+
+aside h3 {
+    color: #5f3045;
+}
+
+/* Formulario */
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 95%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Botón */
+input[type="submit"] {
+    background-color: #8e4a67;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+input[type="submit"]:hover {
+    background-color: #5f3045;
+}
+
+/* Pie de página */
+footer {
+    background-color: #5f3045;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+/* Catálogo de prendas */
+.catalogo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.prenda {
+    background-color: #f5dce6;
+    border-radius: 10px;
+    padding: 12px;
+    text-align: center;
+}
+
+.prenda img {
+    width: 100%;
+    height: 280px;
+    object-fit: contain;
+    background-color: #f2f0f0;
+    border-radius: 8px;
+}
+
+.prenda h3 {
+    color: #5f3045;
+    font-size: 16px;
+    margin: 12px 0 0;
+}
+
+.btn-agregar {
+    background-color: #8e4a67;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.btn-agregar:hover {
+    background-color: #5f3045;
+}
+
+header .logo {
+    max-width: 500px;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+#lista-carrito li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    padding: 8px;
+    background-color: #f5dce6;
+    border-radius: 5px;
+}
+
+.btn-quitar {
+    background-color: #5f3045;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-quitar:hover {
+    background-color: #8e4a67;
+}
+
+#opciones label {
+    display: block;
+    margin: 10px 0;
+}
+
+#opciones select {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#lista-carrito li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-pedido {
+    background-color: #8e4a67;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-pedido:hover {
+    background-color: #5f3045;
+}
+
+#mensaje-pedido {
+    font-weight: bold;
+    color: #5f3045;
+}
+
+#mensaje-contacto {
+    font-weight: bold;
+    color: #5f3045;
+}
+
+/* Páginas separadas */
+nav a.activo {
+    color: #ffd6e5;
+    border-bottom: 2px solid #ffd6e5;
+    padding-bottom: 2px;
+}
+
+#opciones .btn-pedido {
+    margin-top: 10px;
+}
+
+.mensaje {
+    font-weight: bold;
+    color: #5f3045;
+}
+
+section a {
+    color: #8e4a67;
+    font-weight: bold;
+}
+
+/* ---------- Navegación entre secciones (una sola página) ---------- */
+.vista {
+    display: none;
+}
+
+.vista.activa {
+    display: block;
+}
+
+nav.navbar {
+    background-color: #5f3045;
+    padding: 10px;
+}
+
+nav .navbar-brand,
+nav .nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav .nav-link:hover {
+    color: #ffd6e5;
+}
+
+nav .nav-link.activo {
+    color: #ffd6e5;
+    border-bottom: 2px solid #ffd6e5;
+}
+
+/* Menú lateral en pantallas pequeñas */
+dialog.drawer .nav-link {
+    color: #5f3045;
+}
+
+@media (min-width: 768px) {
+    dialog.drawer .nav-link {
+        color: white;
+    }
+}
+
+/* ---------- Opciones: campos nuevos ---------- */
+#opciones textarea {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px;
+    margin-top: 4px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#opciones .btn-pedido {
+    margin-right: 8px;
+}
+
+/* ---------- Inicio de sesión y registro ---------- */
+.pestanas {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.pestana {
+    background-color: #f5dce6;
+    color: #5f3045;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.pestana.activa {
+    background-color: #8e4a67;
+    color: white;
+}
+
+.form-sesion[hidden],
+#panel-cuenta[hidden],
+#panel-acceso[hidden] {
+    display: none;
+}
+
+.form-sesion .form-label {
+    display: block;
+    margin-top: 12px;
+}
+
+.form-sesion input[type="text"],
+.form-sesion input[type="email"],
+.form-sesion input[type="password"] {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-sesion .btn-pedido {
+    margin-top: 18px;
+}
+
+/* Menú siempre visible en pantallas anchas (también si Bootstrap no carga) */
+@media (min-width: 768px) {
+    nav .container-fluid {
+        display: flex !important;
+        align-items: center;
+        width: 100%;
+    }
+
+    nav .navbar-toggler,
+    nav dialog.drawer .drawer-header {
+        display: none !important;
+    }
+
+    nav dialog.drawer {
+        display: block !important;
+        position: static !important;
+        flex: 1 1 auto !important;
+        width: auto !important;
+        max-width: none !important;
+        height: auto !important;
+        border: 0;
+        padding: 0;
+        margin: 0 !important;
+        background: transparent;
+        color: inherit;
+        transform: none !important;
+        visibility: visible !important;
+    }
+
+    nav dialog.drawer .drawer-body {
+        display: block !important;
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    nav .navbar-nav {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center;
+        width: 100% !important;
+        gap: 30px;
+        list-style: none;
+        margin: 0 !important;
+        padding: 0;
+    }
+
+    /* Iniciar sesión / Mi cuenta a la esquina derecha */
+    nav .navbar-nav .nav-item:last-child {
+        margin-left: auto !important;
+    }
+}
